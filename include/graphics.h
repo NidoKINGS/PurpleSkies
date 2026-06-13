@@ -3438,4 +3438,23 @@ extern const u16 gBattleIcons_Pal2[];
 extern const u32 gGhostFrontPic[];
 extern const u16 gGhostPalette[];
 
+// HM Items
+extern const u32 gItemIcon_Surfboard[];
+extern const u16 gItemIconPalette_Surfboard[];
+
+extern const u32 gItemIcon_ScubaGear[];
+extern const u16 gItemIconPalette_ScubaGear[];
+
+extern const u32 gItemIcon_Lantern[];
+extern const u16 gItemIconPalette_Lantern[];
+
+extern const u32 gItemIcon_PowerGlove[];
+extern const u16 gItemIconPalette_PowerGlove[];
+
+extern const u32 gItemIcon_Axe[];
+extern const u16 gItemIconPalette_Axe[];
+
+extern const u32 gItemIcon_Pickaxe[];
+extern const u16 gItemIconPalette_Pickaxe[];
+
 #endif //GUARD_GRAPHICS_H

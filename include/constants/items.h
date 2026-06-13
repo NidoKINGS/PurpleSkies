@@ -1052,6 +1052,14 @@ enum __attribute__((packed)) Item
     ITEM_TATSUGIRINITE = 872,
     ITEM_GLIMMORANITE = 873,
 
+    // HM Items
+    ITEM_SURFBOARD = 874,
+    ITEM_AXE = 875,
+    ITEM_PICKAXE = 876,
+    ITEM_SCUBA_GEAR = 877,
+    ITEM_LANTERN = 878,
+    ITEM_POWER_GLOVE = 879,
+
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,
 };

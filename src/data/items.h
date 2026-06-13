@@ -15832,6 +15832,102 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+    //HM Items
+    [ITEM_SURFBOARD] =
+    {
+        .name = ITEM_NAME("Surfboard"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Special surfboard,\n"
+            "can ride waves\n"
+            "and up waterfalls."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_Surfboard,
+        .iconPic = gItemIcon_Surfboard,
+        .iconPalette = gItemIconPalette_Surfboard,
+    },
+
+    [ITEM_SCUBA_GEAR] =
+    {
+        .name = ITEM_NAME("Scuba Gear"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Compact scuba gear,\n"
+            "allows diving into\n"
+            "darkened waters."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_ScubaGear,
+        .iconPic = gItemIcon_ScubaGear,
+        .iconPalette = gItemIconPalette_ScubaGear, 
+    },
+
+    [ITEM_LANTERN] =
+    {
+        .name = ITEM_NAME("Lantern"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Lantern used to\n"
+            "lighten up even\n"
+            "the darkest caves."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_Lantern,
+        .iconPic = gItemIcon_Lantern,
+        .iconPalette = gItemIconPalette_Lantern, 
+    },
+
+    [ITEM_POWER_GLOVE] =
+    {
+        .name = ITEM_NAME("Power Glove"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Glove empowers the\n"
+            "user with strength\n"
+            "to move boulders."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_PowerGlove,
+        .iconPic = gItemIcon_PowerGlove,
+        .iconPalette = gItemIconPalette_PowerGlove, 
+    },
+
+    [ITEM_AXE] =
+    {
+        .name = ITEM_NAME("Axe"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Sharp edged tool,\n"
+            "used to cut down\n"
+            "small trees."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_Axe,
+        .iconPic = gItemIcon_Axe,
+        .iconPalette = gItemIconPalette_Axe, 
+    },
+
+    [ITEM_PICKAXE] =
+    {
+        .name = ITEM_NAME("Pickaxe"),
+        .price = 0,
+        .description = COMPOUND_STRING(
+            "Sturdy tool that\n"
+            "can break down\n"
+            "large rocks."),
+        .importance = 1,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_FIELD,
+        .fieldUseFunc = ItemUseOutOfBattle_Pickaxe,
+        .iconPic = gItemIcon_Pickaxe,
+        .iconPalette = gItemIconPalette_Pickaxe, 
+    },
 };
 
 #undef ITEM_NAME

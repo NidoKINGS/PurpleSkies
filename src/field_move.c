@@ -8,59 +8,12 @@
 #include "constants/moves.h"
 #include "constants/party_menu.h"
 
-static bool32 IsFieldMoveUnlocked_Cut(void)
-{
-    if (IS_FRLG)
-        return FlagGet(FLAG_BADGE02_GET);
-
-    return FlagGet(FLAG_BADGE01_GET);
-}
-
-static bool32 IsFieldMoveUnlocked_Flash(void)
-{
-    if (IS_FRLG)
-        return FlagGet(FLAG_BADGE01_GET);
-
-    return FlagGet(FLAG_BADGE02_GET);
-}
-
-static bool32 IsFieldMoveUnlocked_RockSmash(void)
-{
-    if (IS_FRLG)
-        return FlagGet(FLAG_BADGE06_GET);
-
-    return FlagGet(FLAG_BADGE03_GET);
-}
-
-static bool32 IsFieldMoveUnlocked_Strength(void)
-{
-    return FlagGet(FLAG_BADGE04_GET);
-}
-
-static bool32 IsFieldMoveUnlocked_Surf(void)
-{
-    return FlagGet(FLAG_BADGE05_GET);
-}
-
 static bool32 IsFieldMoveUnlocked_Fly(void)
 {
     if (IS_FRLG)
         return FlagGet(FLAG_BADGE03_GET);
 
     return FlagGet(FLAG_BADGE06_GET);
-}
-
-static bool32 IsFieldMoveUnlocked_Dive(void)
-{
-    return FlagGet(FLAG_BADGE07_GET);
-}
-
-static bool32 IsFieldMoveUnlocked_Waterfall(void)
-{
-    if (IS_FRLG)
-        return FlagGet(FLAG_BADGE07_GET);
-
-    return FlagGet(FLAG_BADGE08_GET);
 }
 
 static bool32 IsFieldMoveUnlocked_RockClimb(void)
@@ -105,67 +58,11 @@ static bool32 IsFieldMoveUnlocked_Defog(void)
 
 const struct FieldMoveInfo gFieldMoveInfo[FIELD_MOVES_COUNT] =
 {
-    [FIELD_MOVE_CUT] =
-    {
-        .fieldMoveFunc = SetUpFieldMove_Cut,
-        .isUnlockedFunc = IsFieldMoveUnlocked_Cut,
-        .moveID = MOVE_CUT,
-        .partyMsgID = PARTY_MSG_NOTHING_TO_CUT,
-    },
-
-    [FIELD_MOVE_FLASH] =
-    {
-        .fieldMoveFunc = SetUpFieldMove_Flash,
-        .isUnlockedFunc = IsFieldMoveUnlocked_Flash,
-        .moveID = MOVE_FLASH,
-        .partyMsgID = PARTY_MSG_CANT_USE_HERE,
-    },
-
-    [FIELD_MOVE_ROCK_SMASH] =
-    {
-        .fieldMoveFunc = SetUpFieldMove_RockSmash,
-        .isUnlockedFunc = IsFieldMoveUnlocked_RockSmash,
-        .moveID = MOVE_ROCK_SMASH,
-        .partyMsgID = PARTY_MSG_CANT_USE_HERE,
-    },
-
-    [FIELD_MOVE_STRENGTH] =
-    {
-        .fieldMoveFunc = SetUpFieldMove_Strength,
-        .isUnlockedFunc = IsFieldMoveUnlocked_Strength,
-        .moveID = MOVE_STRENGTH,
-        .partyMsgID = PARTY_MSG_CANT_USE_HERE,
-    },
-
-    [FIELD_MOVE_SURF] =
-    {
-        .fieldMoveFunc = SetUpFieldMove_Surf,
-        .isUnlockedFunc = IsFieldMoveUnlocked_Surf,
-        .moveID = MOVE_SURF,
-        .partyMsgID = PARTY_MSG_CANT_SURF_HERE,
-    },
-
     [FIELD_MOVE_FLY] =
     {
         .fieldMoveFunc = SetUpFieldMove_Fly,
         .isUnlockedFunc = IsFieldMoveUnlocked_Fly,
         .moveID = MOVE_FLY,
-        .partyMsgID = PARTY_MSG_CANT_USE_HERE,
-    },
-
-    [FIELD_MOVE_DIVE] =
-    {
-        .fieldMoveFunc = SetUpFieldMove_Dive,
-        .isUnlockedFunc = IsFieldMoveUnlocked_Dive,
-        .moveID = MOVE_DIVE,
-        .partyMsgID = PARTY_MSG_CANT_USE_HERE,
-    },
-
-    [FIELD_MOVE_WATERFALL] =
-    {
-        .fieldMoveFunc = SetUpFieldMove_Waterfall,
-        .isUnlockedFunc = IsFieldMoveUnlocked_Waterfall,
-        .moveID = MOVE_WATERFALL,
         .partyMsgID = PARTY_MSG_CANT_USE_HERE,
     },
 
@@ -216,6 +113,7 @@ const struct FieldMoveInfo gFieldMoveInfo[FIELD_MOVES_COUNT] =
         .moveID = MOVE_SWEET_SCENT,
         .partyMsgID = PARTY_MSG_CANT_USE_HERE,
     },
+    
     [FIELD_MOVE_ROCK_CLIMB] =
     {
         .fieldMoveFunc = SetUpFieldMove_RockClimb,
@@ -223,6 +121,7 @@ const struct FieldMoveInfo gFieldMoveInfo[FIELD_MOVES_COUNT] =
         .moveID = MOVE_ROCK_CLIMB,
         .partyMsgID = PARTY_MSG_CANT_USE_HERE,
     },
+
     [FIELD_MOVE_DEFOG] =
     {
         .fieldMoveFunc = SetUpFieldMove_Defog,
