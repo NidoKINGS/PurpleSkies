@@ -255,9 +255,10 @@ bool8 MetatileBehavior_IsEscalator(u8 metatileBehavior)
         return FALSE;
 }
 
-bool8 Unref_MetatileBehavior_IsUnused04(u8 metatileBehavior)
+// ow-headbutt-encounters
+bool8 MetatileBehavior_IsHeadbuttTree(u8 metatileBehavior)
 {
-    if (metatileBehavior == MB_UNUSED_04)
+    if (metatileBehavior == MB_HEADBUTT)
         return TRUE;
     else
         return FALSE;
